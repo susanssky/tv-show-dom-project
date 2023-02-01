@@ -9,11 +9,31 @@
   </head>
 
   <body>
-    <div id="root"></div>
+    <header>
+      <nav class="nav-show">
+        <select name="show" id="show-select">
+          <option value="none">--Display All Shows--</option>
+        </select>
+        <input class="search-input-show" type="text" />
+        <span class="available-show-num"></span>
+      </nav>
+      <nav class="nav-episode invisible">
+        <select name="episode" id="episode-select">
+          <option value="none">--Display All Episodes--</option>
+        </select>
+        <input class="search-input-episode" type="text" />
+        <span class="available-episode-num"></span>
+        <button class="back-to-show">Back to Show List</button>
+      </nav>
+    </header>
+    <main><div id="roots"></div></main>
 
     <!-- Loads a provided function called getAllEpisodes() which returns all episodes -->
+    <footer>
+      Data from <a href="https://www.tvmaze.com/" target="_blank">TVMaze.com</a>
+    </footer>
     <script src="episodes.js"></script>
-
+    <script src="shows.js"></script>
     <!-- Loads YOUR javascript code -->
     <script src="script.js"></script>
   </body>
